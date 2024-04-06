@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+<title>{% block title %} CRUD - Django {% endblock title %}</title>
+
+{% block main %} 
+
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="border py-4 px-3">
+                        <h3 class="mb-3">Add Todo :)</h3>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <input type="text" name="title" id="" placeholder="Title.." class="form-control" required>
+                            <br>
+                            <textarea name="message" id="" rows="5" class="form-control" placeholder="Write Your Message..."></textarea>
+                            <div class="d-flex justify-content-end mt-4">
+                                <button type="submit" class="btn btn-primary px-4">Add</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="show-todo py-4 px-3">
+                        <ul>
+                            {% if todo %}
+                                {% for td in todo %}
+                                <li>
+                                    <h4>{{td.title}}</h4>
+                                    <p>{{td.message}}</p>
+                                    <div>
+                                        <a href="update-todo/{{td.id}}" class="btn btn-sm btn-success">Update</a>
+                                        <a href="delete-todo/{{td.id}}" class="btn btn-sm btn-danger">Delete</a>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            {% else %}
+                                <h2>No data here..</h2>
+                            {% endif %}    
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock main %}

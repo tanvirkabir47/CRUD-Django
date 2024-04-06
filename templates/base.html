@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <style>
+        .show-todo{
+            border: 1px solid #ddd;
+            overflow-y: scroll;
+        }
+        .show-todo ul{
+            padding: 0;
+            max-height: 500px;
+            list-style: none;
+        }
+        .show-todo ul li{
+            background: #ddd;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="fw-bold bg-primary text-white py-3 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div>
+                        <h1>CRUD Oparation using Django</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% block main %} {% endblock main %}
+
+
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

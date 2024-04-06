@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+<title>{% block title %} Update Todo - Django {% endblock title %}</title>
+
+{% block main %} 
+
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-3">
+                    <div class="border py-4 px-3">
+                        <h3 class="mb-3">Update Todo :)</h3>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <input type="text" name="title"  value="{{todo.title}}" class="form-control" required>
+                            <br>
+                            <textarea name="message" rows="5" class="form-control">{{todo.message}}</textarea>
+                            <div class="d-flex justify-content-end mt-4">
+                                <button type="submit" class="btn btn-primary px-4">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {% endblock main %} 

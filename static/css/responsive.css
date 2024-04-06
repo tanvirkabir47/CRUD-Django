@@ -1,0 +1,105 @@
+/* For Desktop */
+@media only screen and (max-width: 922px){
+    .search-input{
+        display: none;
+    }
+}
+
+/* For Laptop */
+@media only screen and (max-width: 1024px){
+
+}
+
+
+
+/* For Tablet */
+@media only screen and (max-width: 767px){
+    .mobile-menu i{
+        display: block;
+    }
+    #menuCloseBtn{
+        color: #fff;
+        font-size: 20px;
+        display: block;
+    }
+    .navbar{
+        display: block;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        padding: 10px;
+        height: 100vh;
+        background: #242535;
+        width: 80%;
+        transition: 1s;
+        z-index: 999;
+    }
+    .navbar ul{
+        display: block;
+        text-align: center;
+        padding: 20px;
+    }
+    .navbar ul li{
+        color: #fff;
+        padding: 10px 5px;
+    }
+    .navbar ul li a{
+        color: #fff;
+        padding: 10px 5px;
+    }
+    .hero-content{
+        left: 0;
+        top: 60%;
+        margin: 0 20px;
+        padding: 30px 15px;
+    }
+    .hero-content h1{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .post-author img{
+        height: 30px;
+        width: 30px;
+    }
+    .post-author h4{
+        font-size: 14px;
+    }
+    .post-author p{
+        font-size: 12px;
+    }
+    .footer-bottom .footer-logo{
+        text-align: center;
+        width: 100%;
+    }
+    .footer-bottom .footer-link{
+        justify-content: center;
+        margin-top: 8px;
+    }
+    .footer-bottom .footer-link ul li a{
+        font-size: 15px;
+    }
+    .footer-bottom .footer-link ul{
+        gap: 8px;
+    }
+    .footer-bottom .footer-link ul li{
+        padding-right: 8px;
+    }
+    .hero-content-blog-list{
+        left: 0;
+        bottom: 0;
+        margin: 0 20px;
+        padding: 30px 15px;
+    }
+    .hero-content-blog-list h1{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .single-blog-title h1{
+        font-size: 25px;
+    }
+}
+
+/* For Mobile */
+@media only screen and (max-width: 480px){
+
+}
